@@ -195,8 +195,8 @@ public class Process extends UntypedAbstractActor {
                 DecideMsg m = (DecideMsg) message;
                 long elapsedTime =  System.currentTimeMillis() - startTime;
                 log.info( "p" + self().path().name()+" decided : " + m.proposal + " | time :" + elapsedTime);
-                Thread.sleep(100);
-                System.exit(1);
+                //Thread.sleep(100);
+                //System.exit(1);
                 
                 decided = true;
                 for (ActorRef actor : processes.references) {

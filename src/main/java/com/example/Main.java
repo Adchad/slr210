@@ -7,11 +7,13 @@ import java.util.stream.Stream;
 
 public class Main {
 
-    public static int N = 10;
-    private static int f = 4;
 
 
     public static void main(String[] args) throws InterruptedException {
+
+        int N = 100;
+        int f = 49;
+        int tle = 2000;
 
         long start = System.currentTimeMillis();
         // Instantiate an actor system
@@ -52,7 +54,7 @@ public class Main {
             actor.tell(new LaunchMsg(), ActorRef.noSender());
         }
 
-        Thread.sleep(1000);
+        Thread.sleep(tle);
         
 
         for(int i =0 ; i<N ; ++i){
